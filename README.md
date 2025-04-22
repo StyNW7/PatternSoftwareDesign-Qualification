@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="">
-    <img alt="Project Logo" title="Project Logo" src="./images/logo-nobg.png">
+    <img alt="Project Logo" title="Project Logo" src="./Images/logo-nobg.png">
   </a>
 </p>
 
