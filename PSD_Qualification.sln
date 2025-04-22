@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSD_Qualification", "PSD_Qualification\PSD_Qualification.csproj", "{680F10EE-48EE-4CEB-82A9-4C2EFEC05741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSD_Qualification_Frontend", "PSD_Qualification_Frontend\PSD_Qualification_Frontend.csproj", "{1FEB5F43-6735-4E2B-88FD-0B5BE512FB29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680F10EE-48EE-4CEB-82A9-4C2EFEC05741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680F10EE-48EE-4CEB-82A9-4C2EFEC05741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680F10EE-48EE-4CEB-82A9-4C2EFEC05741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680F10EE-48EE-4CEB-82A9-4C2EFEC05741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FEB5F43-6735-4E2B-88FD-0B5BE512FB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FEB5F43-6735-4E2B-88FD-0B5BE512FB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FEB5F43-6735-4E2B-88FD-0B5BE512FB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FEB5F43-6735-4E2B-88FD-0B5BE512FB29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CD84FAA-2E1D-4EF0-9A54-036AE9F135A8}
+	EndGlobalSection
+EndGlobal

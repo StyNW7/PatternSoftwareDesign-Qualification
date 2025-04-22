@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetMeows">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMeowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMeowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMeowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMeow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="skin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMeowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateMeowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMeow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="skin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMeowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMeowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMeow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMeowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteMeowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMeowsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMeows" />
+  </wsdl:message>
+  <wsdl:message name="GetMeowsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMeowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMeowSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMeow" />
+  </wsdl:message>
+  <wsdl:message name="GetMeowSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMeowResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateMeowSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateMeow" />
+  </wsdl:message>
+  <wsdl:message name="CreateMeowSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateMeowResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMeowSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMeow" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMeowSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMeowResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeowSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMeow" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeowSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMeowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MeowWebServiceSoap">
+    <wsdl:operation name="GetMeows">
+      <wsdl:input message="tns:GetMeowsSoapIn" />
+      <wsdl:output message="tns:GetMeowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeow">
+      <wsdl:input message="tns:GetMeowSoapIn" />
+      <wsdl:output message="tns:GetMeowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMeow">
+      <wsdl:input message="tns:CreateMeowSoapIn" />
+      <wsdl:output message="tns:CreateMeowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMeow">
+      <wsdl:input message="tns:UpdateMeowSoapIn" />
+      <wsdl:output message="tns:UpdateMeowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeow">
+      <wsdl:input message="tns:DeleteMeowSoapIn" />
+      <wsdl:output message="tns:DeleteMeowSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MeowWebServiceSoap" type="tns:MeowWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMeows">
+      <soap:operation soapAction="http://tempuri.org/GetMeows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeow">
+      <soap:operation soapAction="http://tempuri.org/GetMeow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMeow">
+      <soap:operation soapAction="http://tempuri.org/CreateMeow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMeow">
+      <soap:operation soapAction="http://tempuri.org/UpdateMeow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeow">
+      <soap:operation soapAction="http://tempuri.org/DeleteMeow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MeowWebServiceSoap12" type="tns:MeowWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMeows">
+      <soap12:operation soapAction="http://tempuri.org/GetMeows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeow">
+      <soap12:operation soapAction="http://tempuri.org/GetMeow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMeow">
+      <soap12:operation soapAction="http://tempuri.org/CreateMeow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMeow">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMeow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeow">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMeow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MeowWebService">
+    <wsdl:port name="MeowWebServiceSoap" binding="tns:MeowWebServiceSoap">
+      <soap:address location="https://localhost:44374/WebServices/MeowWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MeowWebServiceSoap12" binding="tns:MeowWebServiceSoap12">
+      <soap12:address location="https://localhost:44374/WebServices/MeowWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
